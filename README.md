@@ -50,9 +50,3 @@
 - 2018/05/18 : Ver.1.0 : prob2.py リリース
 
 連絡先：[@headshairon_pad](https://twitter.com/headshairon_pad)
-
-<style>
-p{
-  text-indent: 1em;
-}
-</style>
