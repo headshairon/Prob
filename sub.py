@@ -32,11 +32,12 @@ def binthm(n, r, p1, p2):
 def insertpositive(c):
     print(c, "= ", end = "")
     n = is_float(input())
-    while n <= 0:
-        print("0以上の正の整数値を入力してください")
+    k = floor(n)
+    while k <= 0:
+        print("1以上の正の整数値を入力してください")
         n = is_float(input("n = "))
-    else :
         k = floor(n)
+    else :
         if n - k != 0 :
             print("小数部は切り捨てます")
             return k
