@@ -1,3 +1,6 @@
+# Programmed by @headshairon_pad.
+# You are not allowed to use it for commercial use.
+
 # coding:utf-8
 from decimal import *
 from math import *
@@ -45,14 +48,15 @@ def insertpositive(c):
             return int(n)
 
 def insertprob():
-    p1 = is_prob(input("確率をパーセンテージで入力 :"))
+    p1 = is_prob(input("確率 p をパーセンテージで入力 : "))
     while p1 == -1:
         print("0以上100以下の正の整数値を入力してください")
         p1 = sub.is_prob(input("確率をパーセンテージで入力 :"))
     else:
         return Decimal(p1)
 
-def calc(n, r, p1, p2, listd):
+def calc(n, r, p1, p2, m, listd):
+
     for i in listd:
         if i < r:
             print("{0:7d}".format(int(i*5000/17)),"円分:","impossible.")
@@ -63,4 +67,4 @@ def calc(n, r, p1, p2, listd):
             num = num + binthm(i, i - r + 1 + number, p1, p2);
         num = (Decimal(1.0) - num) * 100
 
-        print("{:8.0f}".format(Decimal(i*5000/17)),"円分: ガチャ","{0:4d}".format(i),"回分: ",'{:.8e}'.format(num),"(",'{:.8f}'.format(num),") %")
+        print("{:8.0f}".format(ceil(i*5000*m/85)),"円分: ガチャ","{0:4d}".format(i),"回分: ",'{:.8e}'.format(num),"(",'{:11.8f}'.format(num),") %")
