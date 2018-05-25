@@ -68,3 +68,13 @@ def calc(n, r, p1, p2, m, listd):
         num = (Decimal(1.0) - num) * 100
 
         print("{:8.0f}".format(ceil(i*5000*m/85)),"円分: ガチャ","{0:4d}".format(i),"回分: ",'{:.8e}'.format(num),"(",'{:11.8f}'.format(num),") %")
+
+def iscontinue():
+    x = input("計算を続けますか？： 継続:C , 終了:Q  : ")
+    if x == "C":
+        return True
+    elif x == "Q":
+        return False
+    else :
+        print("もう一度入力してください：")
+        return iscontinue()
